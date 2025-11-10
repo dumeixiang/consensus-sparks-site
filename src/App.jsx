@@ -1,6 +1,17 @@
 import { useState } from "react";
 import { Check, Sparkles, Rocket, Shield, BarChart3, BookOpen, Github, Linkedin, Cpu, Cog, Boxes, Wand2, Mail } from "lucide-react";
 import logo from "./assets/consensus_sparks_logo.png"
+import SitcomAgentSection from "./SitcomAgentSection";
+import {
+  ClipboardList,
+  Code2,
+  GaugeCircle,
+  Presentation,
+  Database,
+  Sliders,
+  Network,
+  RefreshCcw
+} from "lucide-react"
 
 // Button component
 const Button = ({ children, variant = "default", size = "default", className = "", ...props }) => {
@@ -283,40 +294,119 @@ export default function ConsensusSparksSite() {
       </section>
 
 
-{/* DS AGENT (Prototype) */}
+{/* DS AGENT */}
 <section id="ds-agent" className="mx-auto max-w-6xl px-4 py-16">
 <h2 className="text-2xl md:text-3xl font-bold"> Prototype: DS Agent </h2>
-<p className="mt-3 text-slate-600 max-w-3xl">
-Our product is evolving. Today, we offer a <b>DS Agent</b> prototype that plugs into your stack and orchestrates four functions —
-<i> Plan & Methodology</i>, <i> Coding</i>, <i> Evaluation</i>, and <i> Presentation</i> — with budget‑aware routing, retrieval grounding, and an iterative feedback loop.
+{/* <p className="mt-3 text-slate-600 max-w-3xl">
+Data science has always been both science and craft — guided by logic yet refined by intuition. 
+That duality makes it the perfect ground to test intelligent collaboration. 
+<br /><br />
+Our evolving <b>DS Agent</b> prototype plugs directly into your workflow and orchestrates four core functions — 
+<i>Plan & Methodology</i>, <i>Coding</i>, <i>Evaluation</i>, and <i>Presentation</i> — 
+with budget-aware routing, retrieval grounding, and an iterative feedback loop. 
+<br /><br />
+<b>Project Highlights:</b><br />
+• <b>Human-in-the-Loop Intelligence:</b> Balances automation with expert oversight for reliable outcomes.<br />
+• <b>Adaptive Architecture:</b> Modular design scales across data, ML, product, and operations teams.<br />
+• <b>Retrieval-Grounded Reasoning:</b> Combines contextual memory with transparent decision traces.<br />
+• <b>Cost- and Quality-Aware Execution:</b> Routes tasks dynamically to optimize performance and spend.<br />
+• <b>Continuous Learning:</b> Captures insights from each iteration to refine future plans and models.
+</p> */}
+
+<p className="mt-3 text-slate-600 max-w-3xl leading-relaxed md:leading-loose text-justify">
+Data science has always been both science and craft — guided by logic yet refined by intuition. 
+That duality makes it the perfect ground to test intelligent collaboration.
 </p>
 
+<p className="mt-4 text-slate-600 max-w-3xl leading-relaxed md:leading-loose text-justify">
+Our evolving <b>DS Agent</b> prototype plugs directly into your workflow and orchestrates four core functions — 
+<i> Plan & Methodology</i>, <i> Coding</i>, <i> Evaluation</i>, and <i> Presentation</i> — 
+with budget-aware routing, retrieval grounding, and an iterative feedback loop.
+</p>
 
-{/* 4 core functions */}
+<h3 className="mt-6 font-semibold text-lg text-slate-800">Project Highlights:</h3>
+
+<ul className="list-disc list-inside text-slate-600 mt-2 space-y-1">
+  <li><b>Human-in-the-Loop Intelligence:</b> Balances automation with expert oversight for reliable outcomes.</li>
+  <li><b>Adaptive Architecture:</b> Modular design scales across data, ML, product, and operations teams.</li>
+  <li><b>Retrieval-Grounded Reasoning:</b> Combines contextual memory with transparent decision traces.</li>
+  <li><b>Cost- and Quality-Aware Execution:</b> Routes tasks dynamically to optimize performance and spend.</li>
+  <li><b>Continuous Learning:</b> Captures insights from each iteration to refine future plans and models.</li>
+</ul>
+
+
+{/* 4 Core Functions */}
 <div className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-4">
-{[
-{title: "Plan & Methodology", desc: "Problem framing, methodology search, experiment design."},
-{title: "Coding", desc: "Coding model powered Python/SQL generation;check before excute--human in the loop design "},
-{title: "Evaluation", desc: "task relevant metrics, experts review, large langauge model as judge"},
-{title: "Presentation", desc: "Auto‑summaries of model result, agent powered visuals, reports, and briefings."},
-].map((b, i)=> (
-<Card key={i}><CardHeader className="pb-2"><CardTitle className="text-base">{b.title}</CardTitle></CardHeader><CardContent className="text-sm text-slate-600">{b.desc}</CardContent></Card>
-))}
+  {[
+    {
+      title: "Plan & Methodology",
+      icon: <ClipboardList className="h-4 w-4 text-blue-500" />,
+      desc: "Problem framing, methodology search, experiment design."
+    },
+    {
+      title: "Coding",
+      icon: <Code2 className="h-4 w-4 text-green-500" />,
+      desc: "Model-powered Python/SQL generation with human-in-the-loop verification before execution."
+    },
+    {
+      title: "Evaluation",
+      icon: <GaugeCircle className="h-4 w-4 text-orange-500" />,
+      desc: "Task-relevant metrics, expert review, and LLM-as-judge for quality and consistency."
+    },
+    {
+      title: "Presentation",
+      icon: <Presentation className="h-4 w-4 text-purple-500" />,
+      desc: "Auto-summaries of model results, agent-powered visuals, reports, and briefings."
+    },
+  ].map((b, i) => (
+    <div key={i} className="bg-white border border-slate-200 rounded-2xl shadow-sm h-full">
+      <div className="p-6 pb-2">
+        <h3 className="text-base font-semibold leading-none tracking-tight flex items-center gap-2">
+          {b.icon} {b.title}
+        </h3>
+      </div>
+      <div className="p-6 pt-0 text-sm text-slate-600">{b.desc}</div>
+    </div>
+  ))}
 </div>
 
-
-{/* Policies & loop */}
+{/* Policies & Loop */}
 <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4">
-{[
-{title: "Data Curation", desc: "Identify operational or product data and domain expertise datasets; augment them using advanced LLMs and data synthesis."},
-{title: "Fine Tuning", desc: "Apply SFT/DPO to adapt the world model into the DS/ML domain; prefer adapters and retrieval over full fine‑tunes."},
-{title: "RAG Integration", desc: "Structure‑aware chunking of task‑specific data to keep the model grounded and up‑to‑date; triggered by model uncertainty with controllable thresholds."},
-{title: "Feedback Loop", desc: "Leverage a ReAct framework with memory to learn from outcomes and auto‑curate new exemplars for the next iteration."},
-].map((b, i)=> (
-<Card key={i}><CardHeader className="pb-2"><CardTitle className="text-base">{b.title}</CardTitle></CardHeader><CardContent className="text-sm text-slate-600">{b.desc}</CardContent></Card>
-))}
+  {[
+    {
+      title: "Data Curation",
+      icon: <Database className="h-4 w-4 text-cyan-500" />,
+      desc: "Identify operational or product data and domain-expertise datasets; augment them with advanced LLMs and data synthesis."
+    },
+    {
+      title: "Fine Tuning",
+      icon: <Sliders className="h-4 w-4 text-rose-500" />,
+      desc: "Apply SFT/DPO to adapt the world model into the DS/ML domain; prefer adapters and retrieval over full fine-tunes."
+    },
+    {
+      title: "RAG Integration",
+      icon: <Network className="h-4 w-4 text-emerald-500" />,
+      desc: "Structure-aware chunking of task-specific data keeps the model grounded and current; triggered by model uncertainty."
+    },
+    {
+      title: "Feedback Loop",
+      icon: <RefreshCcw className="h-4 w-4 text-indigo-500" />,
+      desc: "Leverage a ReAct framework with memory to learn from outcomes and auto-curate new exemplars for continuous improvement."
+    },
+  ].map((b, i) => (
+    <div key={i} className="bg-white border border-slate-200 rounded-2xl shadow-sm h-full">
+      <div className="p-6 pb-2">
+        <h3 className="text-base font-semibold leading-none tracking-tight flex items-center gap-2">
+          {b.icon} {b.title}
+        </h3>
+      </div>
+      <div className="p-6 pt-0 text-sm text-slate-600">{b.desc}</div>
+    </div>
+  ))}
 </div>
 
+{/* SITCOM WRITER AGENT (Example) */}
+<SitcomAgentSection />
 
 </section>
       {/* HOW IT WORKS */}
@@ -364,7 +454,7 @@ Our product is evolving. Today, we offer a <b>DS Agent</b> prototype that plugs 
         <div className="mt-6 grid md:grid-cols-3 gap-6">
           {[{
             name: "Data Curation and Augmentation",
-            price: "Costum",
+            price: "Custom",
             items: ["Priority support","10k queries/mo","API access","SSO (coming)"] ,
             cta: "Schedule consultation",
           },{
@@ -398,21 +488,43 @@ Our product is evolving. Today, we offer a <b>DS Agent</b> prototype that plugs 
         </div>
       </section>
 
-      {/* CONTACT */}
       <section id="contact" className="mx-auto max-w-3xl px-4 py-16">
-        <h2 className="text-2xl md:text-3xl font-bold">Contact</h2>
-        <p className="mt-3 text-slate-600">Tell us about your use case. We'll reach out with next steps and a sandbox.</p>
-        <div className="mt-6 grid gap-4">
-          <div className="grid md:grid-cols-2 gap-4">
-            <Input placeholder="Your name" required />
-            <Input type="email" placeholder="Work email" value={email} onChange={(e)=> setEmail(e.target.value)} required />
-          </div>
-          <Input placeholder="Company / Team" />
-          <Textarea placeholder="What problem are you solving?" rows={5} />
-          <Button onClick={handleSubmit} className="rounded-2xl">Request demo</Button>
-          <p className="text-xs text-slate-500">This demo form is local‑only. Connect to Formspree or Google Forms for live submissions.</p>
-        </div>
-      </section>
+  <h2 className="text-2xl md:text-3xl font-bold">Contact</h2>
+  <p className="mt-3 text-slate-600">
+    Tell us about your use case. We'll reach out with next steps and a sandbox.
+  </p>
+
+  <form
+    action="https://formspree.io/f/mzzypqab"  // ← replace
+    method="POST"
+    className="mt-6 grid gap-4"
+  >
+    <div className="grid md:grid-cols-2 gap-4">
+      <Input name="name" placeholder="Your name" required />
+      <Input name="email" type="email" placeholder="Work email" required />
+    </div>
+
+    <Input name="company" placeholder="Company / Team" />
+
+    <Textarea
+      name="message"
+      placeholder="What problem are you solving?"
+      rows={5}
+      required
+    />
+
+    {/* Optional extras */}
+    {/* <input type="hidden" name="_subject" value="DS Agent demo request" /> */}
+    {/* <input type="hidden" name="_redirect" value="https://www.consensussparks.com/thank-you" /> */}
+
+    <Button type="submit" className="rounded-2xl">Request demo</Button>
+
+    <p className="text-xs text-slate-500">
+      Delivered securely to hello@consensussparks.com via Formspree.
+    </p>
+  </form>
+</section>
+
 
       {/* FOOTER */}
       <footer className="border-t border-slate-200">
