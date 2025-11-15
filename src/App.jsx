@@ -12,6 +12,8 @@ import {
   Network,
   RefreshCcw
 } from "lucide-react"
+import CharacterPipelineSection from "./CharacterPipelineSection"
+
 
 // Button component
 const Button = ({ children, variant = "default", size = "default", className = "", ...props }) => {
@@ -407,6 +409,8 @@ with budget-aware routing, retrieval grounding, and an iterative feedback loop.
 
 {/* SITCOM WRITER AGENT (Example) */}
 <SitcomAgentSection />
+{/* Character PIPLELINE SELECTION */}
+<CharacterPipelineSection />
 
 </section>
       {/* HOW IT WORKS */}
