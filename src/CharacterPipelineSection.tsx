@@ -34,7 +34,7 @@ export default function CharacterPipelineSection() {
         repetitive precision; the human drives narrative and feeling.
       </p>
 
-      <h3 className="mt-6 font-semibold text-lg text-slate-800">Project Highlights:</h3>
+      <h3 className="mt-6 font-semibold text-lg text-slate-800">Highlights:</h3>
       <ul className="list-disc list-inside text-slate-600 mt-2 space-y-1">
         <li>
           <b>Character Generation:</b> Prompt- and variation-based synthesis; input image triggers

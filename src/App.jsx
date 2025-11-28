@@ -13,6 +13,7 @@ import {
   RefreshCcw
 } from "lucide-react"
 import CharacterPipelineSection from "./CharacterPipelineSection"
+import ResearchOrchestratorSection from "./ResearchOrchestratorSection"
 
 
 // Button component
@@ -307,7 +308,7 @@ Our evolving <b>DS Agent</b> prototype plugs directly into your workflow and orc
 <i>Plan & Methodology</i>, <i>Coding</i>, <i>Evaluation</i>, and <i>Presentation</i> — 
 with budget-aware routing, retrieval grounding, and an iterative feedback loop. 
 <br /><br />
-<b>Project Highlights:</b><br />
+<b>Highlights:</b><br />
 • <b>Human-in-the-Loop Intelligence:</b> Balances automation with expert oversight for reliable outcomes.<br />
 • <b>Adaptive Architecture:</b> Modular design scales across data, ML, product, and operations teams.<br />
 • <b>Retrieval-Grounded Reasoning:</b> Combines contextual memory with transparent decision traces.<br />
@@ -326,7 +327,7 @@ Our evolving <b>DS Agent</b> prototype plugs directly into your workflow and orc
 with budget-aware routing, retrieval grounding, and an iterative feedback loop.
 </p>
 
-<h3 className="mt-6 font-semibold text-lg text-slate-800">Project Highlights:</h3>
+<h3 className="mt-6 font-semibold text-lg text-slate-800">Highlights:</h3>
 
 <ul className="list-disc list-inside text-slate-600 mt-2 space-y-1">
   <li><b>Human-in-the-Loop Intelligence:</b> Balances automation with expert oversight for reliable outcomes.</li>
@@ -411,6 +412,8 @@ with budget-aware routing, retrieval grounding, and an iterative feedback loop.
 <SitcomAgentSection />
 {/* Character PIPLELINE SELECTION */}
 <CharacterPipelineSection />
+{/* Research PIPLELINE SELECTION */}
+<ResearchOrchestratorSection />
 
 </section>
       {/* HOW IT WORKS */}

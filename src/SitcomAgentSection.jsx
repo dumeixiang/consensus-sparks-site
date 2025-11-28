@@ -17,7 +17,7 @@ A good sitcom isn’t written line-by-line; it’s engineered beat-by-beat. Writ
 Our Comedy Agent models that creative process computationally—turning the hidden logic of a writer’s room into a modular retrieval-generation pipeline.
 </p>
 
-<h3 className="mt-6 font-semibold text-lg text-slate-800">Project Highlights:</h3>
+<h3 className="mt-6 font-semibold text-lg text-slate-800">Highlights:</h3>
 <ul className="list-disc list-inside text-slate-600 mt-2 space-y-1">
 <li><b>Respects Comedy Craft:</b> Combines AI capability with deep understanding of comedic principles.</li>
 <li><b>Character-Aware:</b> Maintains authentic voices through structured retrieval and fine-tuning.</li>
