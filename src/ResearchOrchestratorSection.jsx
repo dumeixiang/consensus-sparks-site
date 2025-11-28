@@ -49,7 +49,11 @@ export default function ResearchOrchestratorSection() {
       </h3>
       <ul className="list-disc list-inside text-slate-600 mt-2 space-y-1">
         <li>
-          <b>Intelligent Query Understanding:</b> Classifies intent
+          <b>Multi-Source Data Integration:</b> Web search, local documents, datasets (arXiv/HuggingFace), and APIs into a unified
+          knowledge base.
+        </li>
+        <li>
+          <b>Query Understanding:</b> Classifies intent
           (exploratory, comparative, synthesis, temporal, causal) and
           decomposes complex queries with dependency tracking.
         </li>
@@ -59,24 +63,8 @@ export default function ResearchOrchestratorSection() {
           detailed fact-finding and high-level pattern recognition.
         </li>
         <li>
-          <b>Multi-Stage Research Pipeline:</b> Query Analysis → Task Decomposition
-          → Multi Aspect Reasoning → Hierachical Retrieval → Long Context Synthesis → Citation Verification.
-        </li>
-        <li>
-          <b>Multi-Source Data Integration:</b> Web search, local documents, datasets (arXiv/HuggingFace), and APIs into a unified
-          knowledge base.
-        </li>
-        <li>
           <b>Strategy-Aware Retrieval:</b> Adapts retrieval depth and granularity
           to query type (document, section, or paragraph focus).
-        </li>
-        <li>
-          <b>Citation-First Architecture:</b> Generates inline citations during
-          synthesis with confidence scoring and automated verification.
-        </li>
-        <li>
-          <b>Transparent Reasoning:</b> Outputs execution plans, dependency
-          graphs, retrieval strategies, and verification reports.
         </li>
         <li>
           <b>Human-Centered Research:</b> AI ensures coverage and rigor; humans
